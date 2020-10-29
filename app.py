@@ -1,7 +1,10 @@
 def app(environ, start_response):
-    data = b"Hello, World!\n"
-    start_response("200 OK", [
-        ("Content-Type", "text/plain"),
-        ("Content-Length", str(len(data)))
-    ])
-    return iter([data])
+  #data = b"Hello, World!\n"
+  response_body = '\n'.join([
+    '%s: %s' % (key, value) for key, value in sorted(environ.items())
+  ])
+  start_response("200 OK", [
+    ("Content-Type", "text/plain"),
+    ("Content-Length", str(len(data)))
+  ])
+  return iter([data])
