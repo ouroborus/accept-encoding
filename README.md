@@ -1,4 +1,4 @@
-##`Accept-Encoding` request header reflector##
+## `Accept-Encoding` request header reflector
 
 This is designed for hosting on Heroku for use with https://nearest.ouroborus.org
 
